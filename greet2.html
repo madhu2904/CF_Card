@@ -12,6 +12,745 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+    .hero {
+     height: 100vh; /*Full screen height */
+   
+    
+    
+background-color:hsla(324,100%,92%,1);
+background-image:
+    /* radial-gradient(at 85% 3%, hsla(322,65%,70%,0.93) 0px, transparent 40%),
+    radial-gradient(at 23% 4%, hsla(319,99%,77%,0.93) 0px, transparent 40%),
+    radial-gradient(at 20% 100%, hsla(321,88%,70%,0.63) 0px, transparent 15%); */
+    radial-gradient(at 64% 100%, hsla(311,0%,0%,0) 0px, transparent 50%),
+radial-gradient(at 21% 88%, hsla(307,30%,86%,1) 0px, transparent 50%),
+radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%),
+radial-gradient(at 99% 0%, hsla(330,51%,69%,1) 0px, transparent 50%),
+radial-gradient(at 0% 0%, hsla(340,61%,86%,1) 0px, transparent 50%);
+background-size: cover;
+background-repeat: no-repeat;
+}
+.smallText
+{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+body{
+    position:relative;
+    
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    
+}
+.logo{
+    position:absolute;
+    visibility: hidden;
+}
+.header{
+align-self: flex-start;
+margin-top: 70px ;
+font-size:60px;
+color: #242424;
+
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.gift-container
+{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    bottom:30%;
+    animation:Bounce 3s ease infinite forwards;
+    cursor:pointer;
+
+
+
+}
+@keyframes Bounce
+{
+    0%{
+        transform:translateY(-24px);
+
+    }
+    50%
+    {
+        transform:translateY(0px)
+
+    }
+    100%
+    {
+        transform:translateY(-24px)
+
+    }
+}
+@keyframes BounceOut
+{
+    0%{
+        transform:translateY(24px);
+        scale: .7;
+
+    }
+    50%
+    {
+        transform:translateY(0px);
+        scale:1;
+
+    }
+    100%
+    {
+        transform:translateY(24px);
+        scale:.7;
+
+    }
+}
+.gift-container .gift-box
+{
+   position:absolute;
+   height:200px;
+   width:300px;
+   background: #CD001A;
+   border: 3px solid #b30000; /* Darker border for depth */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+    border-radius: 15px; /* Slight rounding for a realistic look */
+
+    
+
+}
+/* .gift-container.active
+{
+    transform: translateX(-50%);
+} */
+
+
+.gift-container.active{
+    animation:Vibration 1.5s ease forwards;
+    /* transform:translateX(-100%) */
+    /* transition: 5s ease; */
+    /* transform:translateX(-100%);
+ */
+}
+@keyframes MoveLeft
+{
+    0%{
+        transform:translateX(0);
+    }
+    100%{
+        transform:translateX(-100%);
+
+    }
+}
+@keyframes Vibration {
+    0%
+    {
+        transform:scale(1,1) ;
+
+    }
+    25%
+    {
+        transform:scale(.95,1.05) ;
+    }
+    50%
+    {
+        transform:scale(1.1,0.9) ;
+    }
+    70%
+    {
+        transform:scale(0.9,1.1) ;
+    }
+    100%
+    {
+        transform:scale(1,1) translateX(-100%);
+    }
+    
+
+}
+
+.gift-box::before{
+    content:'';
+    position:absolute;
+    width:50px;
+    height:200px;
+    /* background:#FCCB06; */
+    background: linear-gradient(to right, #FCCB06, #F6A600), 
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0px, rgba(255, 255, 255, 0.2) 5px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px); /* Stripes */
+    left:124px;
+    border-radius: 0px 0px 5px 5px;
+
+}
+.gift-box::after{
+    content:'';
+    position:absolute;
+    box-shadow: inset 0 10px rgba(0,0,0,0.3)
+}
+.click
+{
+    position:absolute;
+    background:#CD001A;
+    width:340px;
+    height:90px;
+    top:-140px;
+    border-radius:15px;
+    border: 3px solid #b30000;
+    cursor:pointer;
+    z-index:1;
+    transition: .5s ease;
+    
+   
+
+}
+.click.active
+{
+    transform: translateY(-100px);
+   
+}
+.click::before
+{
+    content:'';
+    position:absolute;
+    width:50px;
+    height:90px;
+    background: linear-gradient(to right, #FCCB06, #F6A600), 
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0px, rgba(255, 255, 255, 0.2) 5px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px); /* Stripes */
+    left:144px;
+    z-index:2;
+    border-radius: 5px 5px 0px 0px;  
+}
+.click::after{
+    content:'';
+    position:absolute;
+    width:5px;
+    height:0px;
+     background:linear-gradient(to right, #FCCB06, #F6A600), 
+     repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0px, rgba(255, 255, 255, 0.2) 5px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px); /* Stripes */
+    border-bottom:60px solid #FCCB06;
+    
+    border-top:60px solid #FCCB06;
+    border-left:60px solid transparent;
+    border-right:60px solid transparent;
+    transform:rotate(-90deg);
+    top:-60px;
+    left:108px;
+    z-index:3;
+    clip-path: inset(0 0 0 50%);
+    border-radius: 10px;
+    
+}
+.gift-container .shadow
+{
+    content:'';
+    width:340px;
+    height:40px;
+    background:rgba(0,0,0,.1);
+    top:100px;
+    border-radius:50%;
+    position:relative;
+    animation:BounceOut 3s ease infinite forwards;
+
+}
+
+.shadow.active
+{
+    animation:none;
+}
+.message-div{
+  position:absolute;
+  /* font-size: 18px; */
+  text-align:center;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding:2px;
+  color: #242424;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  min-height:90px;
+  min-width:300px;
+  max-height:fit-content;
+  max-width:fit-content;
+  background-color:white;
+  /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+  /* border-radius:5px; */
+  border:#242424 solid 1px;
+  /* transition: transform 9s ease,opacity 0.5s ease; */
+  /* transition: opacity 1s ease, visibility 0s 1s; */
+  animation: none;
+  line-height: 1.6;
+  
+
+
+}
+.message{
+    padding:5px;
+}
+.message-div.show-message
+    
+{   animation: messageAnimation 4s ease forwards;
+  }
+  @keyframes messageAnimation {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+    }
+    30% {
+      transform: translate(-30%, -80%) scale(0.5) ;
+      opacity: 0;
+    }
+    40% {
+      transform: translate(-30%, -100%) scale(1) ;
+      opacity: 0.5; /* Opacity starts increasing here */
+    }
+    100% {
+      transform: translate(150%, -120%) scale(2) ;
+      animation:Bounce 3s;
+      opacity: 1;
+    }
+  }
+  #my-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    visibility:hidden; 
+    pointer-events: none;
+}
+#my-canvas.active{
+    visibility: visible;
+    
+}
+footer{
+    position:absolute;
+    align-self: flex-end;
+    bottom:30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+}
+
+.montserrat{
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 30px;
+}
+.logo.active{
+    visibility:hidden;
+}
+
+
+
+/* This is the styles for small screen  */
+
+.total-visitors
+{
+    position:absolute;
+    margin-left: -65%;
+    width:250px;
+    animation:none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    font-size: 32;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 100px;
+    
+    
+}
+.total-visitors.active
+{
+   visibility: hidden;
+   opacity:0;
+
+}
+.visitor-count{
+    font-weight: 600;
+
+}
+.user-visit
+{
+    position:absolute;
+    margin-left: 67%;
+    font-size: 32;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 100px;
+    width:250px;
+}
+.userVisit-count
+{
+    font-weight: 600;
+}
+.user-visit.active
+{
+    visibility: hidden;
+    opacity:0;
+}
+
+@media(max-width:768px) {
+   
+    body{
+        position:relative;
+        height: 100vh;
+       
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        
+    }
+    .header{
+    align-self: flex-start;
+    margin-top: 50px ;
+    font-size:30px;
+    color: #242424;
+    text-align:center;
+    
+    
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .gift-container
+    {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        position:absolute;
+        bottom:40%;
+        animation:Bounce 3s ease infinite forwards;
+        cursor:pointer;
+    
+    
+    
+    }
+    @keyframes Bounce
+    {
+        0%{
+            transform:translateY(-30px);
+    
+        }
+        50%
+        {
+            transform:translateY(0px)
+    
+        }
+        100%
+        {
+            transform:translateY(-30px)
+    
+        }
+    }
+    @keyframes BounceOut
+    {
+        0%{
+            transform:translateY(30px);
+            scale: .7;
+    
+        }
+        50%
+        {
+            transform:translateY(0px);
+            scale:1;
+    
+        }
+        100%
+        {
+            transform:translateY(30px);
+            scale:.7;
+    
+        }
+    }
+    .gift-container .gift-box
+    {
+       position:absolute;
+       height:100px;
+       width:150px;
+       background: #CD001A;
+       border: 3px solid #b30000; /* Darker border for depth */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+        border-radius: 15px; /* Slight rounding for a realistic look */
+    
+        
+    
+    }
+    /* .gift-container.active
+    {
+        transform: translateX(-50%);
+    } */
+    
+    
+    .gift-container.active{
+        animation:Vibration 1.5s ease forwards;
+        /* transform:translateX(-100%) */
+        /* transition: 5s ease; */
+        /* transform:translateX(-100%);
+     */
+    }
+    
+    @keyframes Vibration {
+        0%
+        {
+            transform:scale(1,1) ;
+
+    
+        }
+        25%
+        {
+            transform:scale(.95,1.05) ;
+            opacity:0.75;
+        }
+        50%
+        {
+            transform:scale(1.1,0.9) ;
+            opacity:0.5;
+        }
+        70%
+        {
+            
+            transform:scale(0.9,1.1) translateY(100px) ;
+          
+          opacity:0.7;
+          visibility: hidden;
+            
+        }
+        100%
+        {
+            /* transform:translateY(100px) ; */
+            transform: translateY(100px) ;
+
+         /* opacity:1;    */
+         /* opacity:0.2; */
+    
+         opacity:1;
+         visibility: hidden;
+        
+         
+        }
+        
+    
+    }
+    
+    .gift-box::before{
+        content:'';
+        position:absolute;
+        width:30px;
+        height:100px;
+        /* background:#FCCB06; */
+        background: linear-gradient(to right, #FCCB06, #F6A600), 
+        repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0px, rgba(255, 255, 255, 0.2) 5px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px); /* Stripes */
+        left:58px;
+        border-radius: 0px 0px 5px 5px;
+    
+    }
+    .gift-box::after{
+        content:'';
+        position:absolute;
+        box-shadow: inset 0 10px rgba(0,0,0,0.3)
+    }
+    .click
+    {
+        position:absolute;
+        background:#CD001A;
+        width:180px;
+        height:70px;
+        top:-100px;
+        border-radius:15px;
+        border: 3px solid #b30000;
+        cursor:pointer;
+        z-index:1;
+        transition: .5s ease;
+        
+       
+    
+    }
+    .click.active
+    {
+        transform: translateY(-100px);
+        visibility:hidden;
+       
+    }
+    .click::before
+    {
+        content:'';
+        position:absolute;
+        width:30px;
+        height:70px;
+        background: linear-gradient(to right, #FCCB06, #F6A600), 
+        repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0px, rgba(255, 255, 255, 0.2) 5px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px); /* Stripes */
+        left:73px;
+        z-index:2;
+        border-radius: 5px 5px 0px 0px;  
+    }
+    .click::after{
+        content:'';
+        position:absolute;
+        width:5px;
+        height:0px;
+         background:linear-gradient(to right, #FCCB06, #F6A600), 
+         repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0px, rgba(255, 255, 255, 0.2) 5px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px); /* Stripes */
+        border-bottom:60px solid #FCCB06;
+        
+        border-top:60px solid #FCCB06;
+        border-left:35px solid transparent;
+        border-right:30px solid transparent;
+        transform:rotate(-90deg);
+        top:-60px;
+        left:55px;
+        z-index:3;
+        clip-path: inset(0 0 0 50%);
+        border-radius: 15px;
+        
+    }
+    .gift-container .shadow
+    {
+        content:'';
+        width:260px;
+        height:35px;
+        background:rgba(0,0,0,.1);
+        top:70px;
+        border-radius:50%;
+        position:relative;
+        animation:BounceOut 3s ease infinite forwards;
+    
+    }
+    
+    .shadow.active
+    {
+        animation:none;
+    }
+    .message-div{
+      position:absolute;
+      /* font-size: 18px; */
+      text-align:center;
+      display:flex;
+     
+      justify-content: center;
+      align-items: center;
+      padding:2px;
+      color: #242424;
+      top: 50%;
+      left: 30%;
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+      min-height:50px;
+      min-width:100px;
+      max-height:fit-content;
+      max-width:50%;
+      background-color:white;
+      /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+      /* border-radius:5px; */
+      border:#242424 solid 1px;
+      /* transition: transform 9s ease,opacity 0.5s ease; */
+      /* transition: opacity 1s ease, visibility 0s 1s; */
+      animation: none;
+      line-height: 1.6;
+      
+    
+    
+    }
+    .message{
+        padding:3px;
+      
+    }
+    .message-div.show-message
+        
+    {   animation: messageAnimation 2s ease forwards;
+        visibility: visible;
+       
+      }
+      @keyframes messageAnimation {
+        0% {
+          transform: translate(0%, -80%) scale(0);
+          /* opacity: 0.1; */
+          opacity:0;
+          visibility: hidden;
+        }
+        30% {
+          transform: translate(-10%, -100%) scale(1) ;
+          /* opacity: 0.5; */
+          visibility: hidden;
+        }
+        40% {
+          transform: translate(-15%, -150%) scale(1.8) ;
+          opacity: 0.8; /* Opacity starts increasing here */
+          visibility: visible;
+        }
+        100% {
+          transform: translate(-18%, -150%) scale(1.8) ;
+          animation:Bounce 3s;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      #my-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        visibility:hidden; 
+        pointer-events: none;
+    }
+    #my-canvas.active{
+        visibility: visible;
+        
+    }
+    footer{
+        position:absolute;
+        align-self: flex-end;
+        bottom:30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 15px;
+        padding: auto;
+    }
+    
+    .montserrat{
+      font-family: "Montserrat", serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 16px;
+      text-align:justify;
+    }
+    .logo{
+        height:60px;
+        width:60px;
+        visibility: visible; 
+        border-radius: 50%;
+        /* margin-top:70%; */
+        bottom:80px;
+        position:absolute;
+        align-self:flex-end;
+      opacity:1;
+    }
+    .total-visitors{
+        /* visibility: hidden; */
+        position:absolute;
+        margin-top: -350px;
+        font: 20px;
+        margin-left: 5%;
+        font-size: 25px;
+        width:fit-content;
+
+        
+    }
+    .visitor-count{
+        font-size: 20px;
+    }
+    .user-visit{
+        visibility: hidden;
+        width:0px;
+        margin-left: 0%;
+
+    }
+
+    
+}
+</style>
+
         
     </head> 
  
@@ -19,7 +758,14 @@
     <body  class="hero">
         <canvas id="my-canvas"></canvas>
         <h1 class="header">CODERS FORUM HAS SENT YOU A SURPRISE !</h1>
+       <div class="total-visitors">
+            <p>Total Surprises Delivered</p>
+            <p class="visitor-count">$COUNT-PLACE-HOLDER$</p>
+      </div>
+        
         <div class="gift-container">
+            
+           
             <div class="shadow"></div>
             <div class="gift-box"></div>
               <div class="click">
@@ -29,14 +775,152 @@
                 <p class="message">hello</p>
               </div>
 
-            </div>
+           
         </div>
+           
+        </div>
+        <div class="user-visit">
+            <p>Why are you open Your </p>
+            <p class="userVisit-count">Suprise !</p>
+        </div>
+
+    
         
     
         <img src="./cf-logo1.jpg" class="logo"/>
         <footer>
-            <p>Designed and Developed By <a href="https://codersforum.netlify.app/" style="color:black">Coders Forum</a></p>
+            <p>Designed, Developed and Deployed By <a href="https://codersforum.netlify.app/" style="color:black">Coders Forum</a></p>
         </footer>
+        <script>
+            const texts=[
+    "This year, your coding skills will unlock incredible career opportunities.",
+    "May your Java programs be efficient, and your algorithms groundbreaking.",
+    "Expect a year of debugging success and mastering new programming paradigms.",
+    "Your dedication to coding will lead to innovative projects and achievements.",
+    "This New Year, embrace challenges in computer science and thrive like never before.",
+    "Your web development skills will create stunning, impactful applications this year.",
+    "Dive into software development, and watch your career soar to new heights.",
+    "This year, every error you solve will bring you closer to greatness.",
+    "May your data structures be efficient, and your solutions always optimal.",
+    "Explore new frameworks and languages; the future of IT awaits your contributions.",
+    "Your passion for technology will lead to exceptional growth this year.",
+    "Expect a year of collaboration, innovation, and breakthrough achievements.",
+    "This New Year, let your creativity shine in every line of code.",
+    "Your programming journey will open doors to remarkable opportunities in IT.",
+    "May your applications run flawlessly and bring value to users worldwide.",
+    "This year, your debugging skills will turn challenges into triumphs.",
+    "Expand your knowledge in cloud computing and watch your projects soar.",
+    "Your persistence in coding will lead to groundbreaking solutions.",
+    "This New Year, push the limits of your skills and achieve the extraordinary.",
+    "Expect a year of clean code, efficient logic, and impactful contributions.",
+    "Your expertise in Java will lead to amazing opportunities this year.",
+    "This year, your commitment to learning will bring immense professional growth.",
+    // "May your journey into cybersecurity be as secure as your future career.",
+    "Your love for algorithms will make complex problems look like puzzles this year.",
+    "This year, build web solutions that inspire and impact millions.",
+    "Your code will resonate as a symphony of creativity and functionality this year.",
+    "Embrace AI and ML, and see your IT career flourish in new dimensions.",
+    "May your Git commits always be meaningful and your projects successful.",
+    "This year, your IT skills will bridge gaps and create new possibilities.",
+    "Your journey in coding will inspire peers and set benchmarks for success.",
+    "Focus on learning DevOps, and watch your workflow transform this year.",
+    "Your passion for full-stack development will lead to impressive achievements.",
+    "May your code repositories grow with innovative and impactful projects.",
+    "This year, your technical expertise will turn heads in the IT industry.",
+    "Expect a year of high performance, both in your apps and your career.",
+    "Your dedication to open-source contributions will be recognized worldwide.",
+    "This New Year, make breakthroughs in database optimization and scalability.",
+    "Let your technical prowess redefine software development standards this year.",
+    "May your user interfaces be intuitive and your user experiences delightful.",
+    "This year, master new technologies and lead projects with confidence.",
+    "Your coding journey will evolve into a remarkable story of success.",
+    "May your API calls be seamless and your server responses swift this year.",
+    "Focus on blockchain and see your innovations transform industries.",
+    "This New Year, let your entrepreneurial ideas shine in the tech world.",
+    "Your coding resilience will lead to unexpected opportunities this year.",
+    "Build innovative solutions with Python and JavaScript and leave a legacy.",
+    "May your development environments be stable and your outputs flawless.",
+    "This year, take the lead in collaborative software projects and shine.",
+    "Let your passion for coding drive you to new heights in the IT industry.",
+    "Your hard work and perseverance will lead to a year of unparalleled success."
+  ];
+  
+
+document.addEventListener('DOMContentLoaded', function () {
+    const click = document.querySelector('.click');
+    const giftBox = document.querySelector('.gift-container');
+    const shadow = document.querySelector('.shadow');
+    const messageDiv = document.querySelector('.message-div');
+    const message=document.querySelector('.message');
+    const confettiCanvas=document.querySelector('#my-canvas');
+    
+    
+   
+
+    giftBox.addEventListener('click', () => {
+        const duration=5*10000;
+        const AnimationEnd=Date.now()+duration;
+        if (!click.classList.contains('active')) {
+            click.classList.add('active');
+            giftBox.classList.add('active');
+            shadow.classList.add('active');
+            messageDiv.classList.add('show-message');
+            message.textContent=texts[Math.floor(Math.random()*texts.length)];
+
+            giftBox.addEventListener('transitioned',function handler(){
+                console.log('animation ended');
+                giftBox.classList.remove('vibrate');
+                
+                messageDiv.classList.add('show-message');
+                giftBox.removeEventListener('animationend', handler);
+               
+               
+            });
+            document.querySelector('.header').textContent="HAPPY NEW YEAR 2025!";
+            confettiCanvas.classList.add('active');
+            var confettiSettings = { target: 'my-canvas',max:400,
+                colors: 
+                // [[192, 192, 192], [255, 215, 0], [205, 127, 50], [80, 200, 120], [65, 105, 225], [220, 20, 60]],
+                [[139, 0, 139],    // Dark Magenta
+                [255, 69, 0],     // Red-Orange
+                [34, 139, 34],    // Forest Green
+                [0, 0, 205],      // Medium Blue
+                [178, 34, 34],    // Firebrick Red
+                [218, 165, 32],   // Goldenrod
+                [47, 79, 79],     // Dark Slate Gray
+                [72, 61, 139],    // Dark Slate Blue
+                [255, 215, 0],    // Gold
+                [128, 0, 0]],       // Maroon
+                animate:true,
+                clock:50,
+                rotate:true,
+                weight:20
+
+             };
+            var confetti = new ConfettiGenerator(confettiSettings);
+            confetti.render();
+            document.querySelector('.total-visitors').classList.add('active');
+            document.querySelector('.user-visit').classList.add('active');
+            
+            
+          
+
+
+
+        } else {
+            click.classList.remove('active');
+            giftBox.classList.remove('active');
+            shadow.classList.remove('active');
+            messageDiv.classList.remove('show-message');
+            document.querySelector('.header').textContent="CODERS FORUM HAS SENT YOU A SURPRISE !";
+            confettiCanvas.classList.remove('active');
+            document.querySelector('.total-visitors').classList.remove('active');
+            document.querySelector('.user-visit').classList.remove('active');
+        }
+    });
+});
+
+        </script>
     </body>
     
 </html>

@@ -332,11 +332,56 @@ footer{
 
 /* This is the styles for small screen  */
 
+.total-visitors
+{
+    position:absolute;
+    margin-left: -65%;
+    width:250px;
+    animation:none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    font-size: 32;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 100px;
+    
+    
+}
+.total-visitors.active
+{
+   visibility: hidden;
+   opacity:0;
+
+}
+.visitor-count{
+    font-weight: 600;
+
+}
+.user-visit
+{
+    position:absolute;
+    margin-left: 67%;
+    font-size: 32;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 100px;
+    width:250px;
+}
+.userVisit-count
+{
+    font-weight: 600;
+}
+.user-visit.active
+{
+    visibility: hidden;
+    opacity:0;
+}
+
 @media(max-width:768px) {
    
     body{
         position:relative;
-        
+        height: 100vh;
+       
         display:flex;
         justify-content: center;
         align-items:center;
@@ -644,6 +689,7 @@ footer{
         bottom:30px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         font-size: 15px;
+        padding: auto;
     }
     
     .montserrat{
@@ -660,10 +706,31 @@ footer{
         visibility: visible; 
         border-radius: 50%;
         /* margin-top:70%; */
-        bottom:70px;
+        bottom:80px;
         position:absolute;
         align-self:flex-end;
       opacity:1;
     }
+    .total-visitors{
+        /* visibility: hidden; */
+        position:absolute;
+        margin-top: -350px;
+        font: 20px;
+        margin-left: 5%;
+        font-size: 25px;
+        width:fit-content;
+
+        
+    }
+    .visitor-count{
+        font-size: 20px;
+    }
+    .user-visit{
+        visibility: hidden;
+        width:0px;
+        margin-left: 0%;
+
+    }
+
     
 }

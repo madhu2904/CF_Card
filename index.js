@@ -92,6 +92,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const messageDiv = document.querySelector('.message-div');
     const message=document.querySelector('.message');
     const confettiCanvas=document.querySelector('#my-canvas');
+    
+    
    
 
     giftBox.addEventListener('click', () => {
@@ -136,6 +138,8 @@ document.addEventListener('DOMContentLoaded', function () {
              };
             var confetti = new ConfettiGenerator(confettiSettings);
             confetti.render();
+            document.querySelector('.total-visitors').classList.add('active');
+            document.querySelector('.user-visit').classList.add('active');
             
             
           
@@ -149,6 +153,8 @@ document.addEventListener('DOMContentLoaded', function () {
             messageDiv.classList.remove('show-message');
             document.querySelector('.header').textContent="CODERS FORUM HAS SENT YOU A SURPRISE !";
             confettiCanvas.classList.remove('active');
+            document.querySelector('.total-visitors').classList.remove('active');
+            document.querySelector('.user-visit').classList.remove('active');
         }
     });
 });
