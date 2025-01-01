@@ -1,36 +1,4 @@
-// // 
-// document.addEventListener('DOMContentLoaded', function () {
-//     const click = document.querySelector('.click');
-//     const giftBox= document.querySelector('.gift-container');
-//     const shadow=document.querySelector('.shadow');
-//     const messageDiv=document.querySelector('.message-div');
-    
-//     // click.addEventListener('click', () => {
-//     //     if (click.className === "click") {
-//     //         click.classList.add('active');
-//     //         giftBox.classList.add('active');
-//     //         shadow.classList.add('active');
-//     //     } else {
-//     //         click.classList.remove('active');
-//     //         giftBox.classList.remove('active');
-//     //         shadow.classList.remove('active');
-//     //     }
-//     // });
-//     giftBox.addEventListener('click', () => {
-//         if (click.className === "click") {
-//             click.classList.add('active');
-//             giftBox.classList.add('active');
-//             shadow.classList.add('active');
-//             messageDiv.classList.add('show-message');
-//         } else {
-//             click.classList.remove('active');
-//             giftBox.classList.remove('active');
-//             shadow.classList.remove('active');
-//             messageDiv.classList.remove('show-message');
-//         }
-//     });
-    
-// });
+
 const texts=[
     "This year, your coding skills will unlock incredible career opportunities.",
     "May your Java programs be efficient, and your algorithms groundbreaking.",
