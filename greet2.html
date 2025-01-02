@@ -463,18 +463,13 @@ footer{
         
     
     }
-    /* .gift-container.active
-    {
-        transform: translateX(-50%);
-    } */
+   
     
     
     .gift-container.active{
         animation:Vibration 1.5s ease forwards;
-        /* transform:translateX(-100%) */
-        /* transition: 5s ease; */
-        /* transform:translateX(-100%);
-     */
+        
+     
     }
     
     @keyframes Vibration {
@@ -610,7 +605,7 @@ footer{
     }
     .message-div{
       position:absolute;
-      /* font-size: 18px; */
+    
       text-align:center;
       display:flex;
      
@@ -627,11 +622,9 @@ footer{
       max-height:fit-content;
       max-width:50%;
       background-color:white;
-      /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
-      /* border-radius:5px; */
+      
       border:#242424 solid 1px;
-      /* transition: transform 9s ease,opacity 0.5s ease; */
-      /* transition: opacity 1s ease, visibility 0s 1s; */
+      
       animation: none;
       line-height: 1.6;
       
@@ -651,18 +644,18 @@ footer{
       @keyframes messageAnimation {
         0% {
           transform: translate(0%, -80%) scale(0);
-          /* opacity: 0.1; */
+          
           opacity:0;
           visibility: hidden;
         }
         30% {
           transform: translate(-10%, -100%) scale(1) ;
-          /* opacity: 0.5; */
+          
           visibility: hidden;
         }
         40% {
           transform: translate(-15%, -150%) scale(1.8) ;
-          opacity: 0.8; /* Opacity starts increasing here */
+          opacity: 0.8; 
           visibility: visible;
         }
         100% {
@@ -717,7 +710,7 @@ footer{
       opacity:1;
     }
     .total-visitors{
-        /* visibility: hidden; */
+        
         
         align-self: flex-start;
         margin-left: auto;
@@ -730,7 +723,7 @@ footer{
         
         font-weight:lighter;
         padding: 17px;
-        /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+       
 
         
     }
@@ -757,7 +750,7 @@ footer{
         <h1 class="header">CODERS FORUM HAS A SURPRISE FOR YOU !</h1>
        <div class="total-visitors">
             <p>Total Surprises Delivered</p> 
-            <p class="visitor-count">SENT</p>
+            <p class="visitor-count">$COUNT-PLACE-HOLDER$</p>
            
             
       </div>
@@ -786,7 +779,7 @@ footer{
     
         
     
-        <img src="https://raw.githubusercontent.com/madhu2904/CF_Card/main/cf-logo1.jpg" class="logo"/>
+        <img src="https://github.com/madhu2904/CF_Card/blob/main/cf-logo1.jpg" class="logo"/>
         <footer>
             <p>Designed, Developed and Deployed By <a href="https://codersforum.netlify.app/" style="color:black">Coders Forum</a></p>
         </footer>
@@ -818,7 +811,6 @@ footer{
     "Expect a year of clean code, efficient logic, and impactful contributions.",
     "Your expertise in Java will lead to amazing opportunities this year.",
     "This year, your commitment to learning will bring immense professional growth.",
-    // "May your journey into cybersecurity be as secure as your future career.",
     "Your love for algorithms will make complex problems look like puzzles this year.",
     "This year, build web solutions that inspire and impact millions.",
     "Your code will resonate as a symphony of creativity and functionality this year.",
@@ -883,17 +875,16 @@ document.addEventListener('DOMContentLoaded', function () {
             confettiCanvas.classList.add('active');
             var confettiSettings = { target: 'my-canvas',max:400,
                 colors: 
-                // [[192, 192, 192], [255, 215, 0], [205, 127, 50], [80, 200, 120], [65, 105, 225], [220, 20, 60]],
-                [[139, 0, 139],    // Dark Magenta
-                [255, 69, 0],     // Red-Orange
-                [34, 139, 34],    // Forest Green
-                [0, 0, 205],      // Medium Blue
-                [178, 34, 34],    // Firebrick Red
-                [218, 165, 32],   // Goldenrod
-                [47, 79, 79],     // Dark Slate Gray
-                [72, 61, 139],    // Dark Slate Blue
-                [255, 215, 0],    // Gold
-                [128, 0, 0]],       // Maroon
+                [[139, 0, 139],    
+                [255, 69, 0],     
+                [34, 139, 34],    
+                [0, 0, 205],      
+                [178, 34, 34],    
+                [218, 165, 32],   
+                [47, 79, 79],     
+                [72, 61, 139],    
+                [255, 215, 0],    
+                [128, 0, 0]],     
                 animate:true,
                 clock:50,
                 rotate:true,

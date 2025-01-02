@@ -22,7 +22,6 @@ const texts=[
     "Expect a year of clean code, efficient logic, and impactful contributions.",
     "Your expertise in Java will lead to amazing opportunities this year.",
     "This year, your commitment to learning will bring immense professional growth.",
-    // "May your journey into cybersecurity be as secure as your future career.",
     "Your love for algorithms will make complex problems look like puzzles this year.",
     "This year, build web solutions that inspire and impact millions.",
     "Your code will resonate as a symphony of creativity and functionality this year.",
